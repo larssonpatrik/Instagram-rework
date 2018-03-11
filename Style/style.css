@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #fafafa;
   --main-border-color: rgba(0,0,0,.0975);
+  --gray: #999;
 
   --spacing-small: 16px;
   --spacing-medium: 26px;
@@ -65,4 +66,15 @@ img {
 
 .right {
   flex: 1 1 auto;
+}
+
+.divider {
+  border-bottom: 1px solid #efefef;
+  margin: var(--spacing-small) 0;
+}
+
+.title {
+  color: var(--gray);
+  font-weight: 600;
+  margin-bottom: var(--spacing-small);
 }

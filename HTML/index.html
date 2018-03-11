@@ -4,6 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="../style/user.css">
   <link rel="stylesheet" href="../style/style.css">
   <link rel="stylesheet" href="../style/post.css">
   <title>Instaman</title>
@@ -23,30 +24,72 @@
     <div class="wrap">
       <div class="content">
         <div class="left">
-          <div class="post" v-for="post in [1,2,3,4]">
+          <div class="post" v-for="post in posts">
             <div class="post-header">
               <div class="post-header-img">
-                <img src="https://instagram.fbma1-1.fna.fbcdn.net/vp/cecd7ab9b71f78250f6f53778a363c06/5B3EDFF7/t51.2885-19/s150x150/15803255_985517528216896_4405493851251277824_a.jpg" alt="">
+                <img v-bind:src="post.img" alt="">
               </div>
 
               <div class="post-header-name">
-                neildegrassetyson
+                {{ post.name }}
               </div>
             </div>
 
             <div class="post-img">
-              <img src="https://i.ytimg.com/vi/RPGLcx6Fy_0/maxresdefault.jpg" alt="">
+              <img v-bind:src="post.postImg" alt="">
             </div>
 
             <div class="post-footer">
-              footer
+              47 likes
             </div>
           </div>
         </div>
 
         <div class="right">
 
+          <div class="user">
+            <div class="user-img">
+              <img src="https://instagram.fbma1-1.fna.fbcdn.net/vp/7c44b7abe9cb4f75f8235202e4d45f8a/5B36009D/t51.2885-19/s320x320/13743247_123176468123677_1998054542_a.jpg" alt="">
+            </div>
+
+            <div class="user-info">
+              <div class="user-name">
+                paddmeister
+              </div>
+
+              <div class="user-details">
+                Patrik Larsson
+              </div>
+            </div>
+          </div>
+
+          <div class="divider">
+          </div>
+
+          <div class="title">
+            Händelser
+          </div>
+
+          <div class="user" v-for="story in stories">
+            <div class="user-img story" v-bind:class="{unread: !story.read}">
+              <div class="user-img-border">
+                <img class="" v-bind:src="story.img" alt="">
+              </div>
+            </div>
+
+            <div class="user-info">
+              <div class="user-name">
+                {{ story.name }}
+              </div>
+
+              <div class="user-details">
+                {{ story.time }}
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </div>
   </div>
