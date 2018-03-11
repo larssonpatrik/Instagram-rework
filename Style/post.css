@@ -1,0 +1,35 @@
+.post {
+  border: 1px solid var(--main-border-color);
+  background-color: white;
+  border-radius: 3px;
+}
+
+.post + .post {
+  margin-top: var(--spacing-large);
+}
+
+.post-header {
+  padding: var(--spacing-small);
+  display: flex;
+  align-items: center;
+}
+
+.post-header-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: var(--spacing-small);
+}
+
+.post-header-name {
+  font-weight: 600;
+}
+
+.post-img {
+
+}
+
+.post-footer {
+    padding: var(--spacing-small);
+}
